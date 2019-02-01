@@ -11,5 +11,23 @@ namespace week_4
         static void Main(string[] args)
         {
         }
+        class village
+        {
+            bool isAstrildeHere;
+            village nextvillage;
+            village prevvillage;
+            String villagename;
+
+        }
+        class countryside
+        {
+            village mapple;
+            village toronto;
+            village ajax;
+        }
+
     }
 }
+
+
+
