@@ -10,7 +10,29 @@ namespace week_4
     {
         static void Main(string[] args)
         {
-            Countryside c = new Countryside();
+            //countryside c = new countryside();
+            //c.run();
+            (new LearningExperiment()).run();
+        }
+    }
+    class LearningExperiment
+    {
+        public void run()
+        {
+            village Toronto;
+            Toronto = new village();
+            village a, b, c;
+            Toronto.villagename = "version A";
+            a = Toronto;
+            Console.WriteLine(a.villagename);
+            Toronto = new village();
+            Toronto.villagename = "version B";
+            b = Toronto;
+            Console.WriteLine(a.villagename);
+            Toronto = new village();
+            Toronto.villagename = "version C";
+            c = Toronto;
+            Console.WriteLine(a.villagename);
         }
         
         class village
@@ -30,6 +52,8 @@ namespace week_4
             public void run()
             {
                 Maple = new village();
+                Toronto = new village();
+                Ajax   = new village();
                 Maple.villagename = "Toronto";
                 Maple.nextvillage = Toronto;
             }
