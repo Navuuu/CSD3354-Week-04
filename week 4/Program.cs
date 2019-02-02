@@ -10,9 +10,12 @@ namespace week_4
     {
         static void Main(string[] args)
         {
-            //countryside c = new countryside();
-            //c.run();
-            (new LearningExperiment()).run();
+            
+         
+            Countryside c = new Countryside();
+            c.run();
+
+
         }
     }
     class LearningExperiment
@@ -34,10 +37,10 @@ namespace week_4
             c = Toronto;
             Console.WriteLine(a.villagename);
         }
-        
+    }
         class village
         {
-          public  bool isAstrildeHere;
+          public  bool isAstrilde;
           public  village nextvillage;
           public  village prevvillage;
           public string villagename;
@@ -54,12 +57,24 @@ namespace week_4
                 Maple = new village();
                 Toronto = new village();
                 Ajax   = new village();
+                Ajax.isAstrilde = true;
                 Maple.villagename = "Toronto";
                 Maple.nextvillage = Toronto;
             }
+            public void travel()
+            {
+                village currentvillage = Toronto;
+                while (!currentvillage.isAstrilde)
+                {
+                    if (currentvillage.isAstrilde)
+                        Console.WriteLine("You found Astrilde in " + currentvillage);
+                    else
+                        currentvillage = currentvillage.nextvillage;
+                }
+            }
         }
 
-    }
+    
 }
 
 
