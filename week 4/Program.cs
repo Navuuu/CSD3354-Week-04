@@ -10,20 +10,29 @@ namespace week_4
     {
         static void Main(string[] args)
         {
+            Countryside c = new Countryside();
         }
+        
         class village
         {
-            bool isAstrildeHere;
-            village nextvillage;
-            village prevvillage;
-            String villagename;
+          public  bool isAstrildeHere;
+          public  village nextvillage;
+          public  village prevvillage;
+          public string villagename;
 
         }
-        class countryside
+        class Countryside
         {
-            village mapple;
-            village toronto;
-            village ajax;
+            village Maple;
+            village Toronto;
+            village Ajax;
+
+            public void run()
+            {
+                Maple = new village();
+                Maple.villagename = "Toronto";
+                Maple.nextvillage = Toronto;
+            }
         }
 
     }
